@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="clients-table">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Client #</th>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Street</th>
+				<th>City</th>
+				<th>State</th>
+				<th>ZipCode</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for client in clients.values() %}
+			<tr>
+				<td>{{ client.Id }}</td>
+				<td>{{ client.Name }} </td>
+				<td><a href="tel:{{ client.Phone }}">{{ client.Phone }}</a></td>
+				<td><a href="mailto:{{ client.Email }}">{{ client.Email }}</a></td>
+				<td><a href="https://www.google.com/maps/dir/20 N Wacker Dr. Suite 1450/{{ client.Street}}/">{{ client.Street }}</a></td>
+				<td>{{ client.City }} </td>
+				<td>{{ client.State }} </td>
+				<td>{{ client.ZipCode }} </td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
+

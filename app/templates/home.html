@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+	<h1>{{info.Name}}</h1>
+	<br>
+	<h3> Purpose</h3>
+	{{ info.Description }}
+	<h3>Location</h3>
+	<a href="http://www.bing.com/maps/default.aspx?where1={{info.Street}}
+	{{info.City}}, {{info.State}} {{info.ZipCode}}">{{info.Street}}
+	{{info.City}}, {{info.State}} {{info.ZipCode}}</a>
+
+</center>
+<!-- One way of programmatically displaying contact info
+<dl class="dl-horizontal">
+	{% for i in info %}
+	<dt>{{i}}</dt>
+	<dd>{{info[i]}}</dd>
+	{% endfor %}
+</dl>
+-->
+
+{% endblock %}

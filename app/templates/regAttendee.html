@@ -1,0 +1,19 @@
+{% extends "reg.html" %}
+
+
+{% block regContent %}
+
+
+{% from "_formhelpers.html" import render_field %}
+<center>
+<form method=post action="/register/attendee">
+  <dl>
+    {{ render_field(form.name) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.clientId) }}
+  </dl>
+  <p><input id="registerBtn" type=submit value=Register></p>
+</form>
+</center>
+
+{% endblock %}

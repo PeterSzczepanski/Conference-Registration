@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="attendees-table">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Client #</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for attendee in attendees.values() %}
+			<tr>
+				<td>{{ attendee.ClientId }}</td>
+				<td>{{ attendee.Name }} </td>
+				<td><a href="mailto:{{ attendee.Email }}">{{ attendee.Email }}</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
