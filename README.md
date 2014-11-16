@@ -1,6 +1,3 @@
-Conference-Registration
-=======================
-
 # Conference Registration
 
 This is a simple flask conference registration app for clients and attendees. Data is pulled and stored on firebase.
